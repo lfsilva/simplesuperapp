@@ -5,7 +5,7 @@
 
 Proposta de implementação modular de um super app SwiftUI com clean architecture.
 
-![screenshot](https://raw.githubusercontent.com/lfsilva/simplesuperapp/refs/heads/main/docs/imgs/screenshot.png)
+![screenshot](https://github.com/lfsilva/simplesuperapp/blob/main/docs/imgs/screenshot.png)
 
 ## Key Features
 
