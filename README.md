@@ -30,8 +30,6 @@ API_KEY = 1234
 
 Onde `API_KEY` é a chave de autorização da API que pode ser obtida em https://rapidapi.com/developer/authorization.
 
-> dica: `cp .env.example .env`
-
 ## Author
 
 Leandro Fernandes, lfsilva@me.com
