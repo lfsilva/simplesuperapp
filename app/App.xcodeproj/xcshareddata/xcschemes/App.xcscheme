@@ -11,7 +11,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "configFile=&quot;${SRCROOT}/App/Config.xcconfig&quot; &gt; $configFile&#10;cat &quot;${SRCROOT}/.env&quot; &gt;&gt; $configFile&#10;">
+               scriptText = "if [ ! -f &quot;${SRCROOT}/.env&quot; ]; then&#10;    touch &quot;${SRCROOT}/.env&quot;&#10;fi&#10;configFile=&quot;${SRCROOT}/App/Config.xcconfig&quot; &gt; $configFile&#10;cat &quot;${SRCROOT}/.env&quot; &gt;&gt; $configFile&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
