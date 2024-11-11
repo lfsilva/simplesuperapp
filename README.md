@@ -4,7 +4,7 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-Proposta de implementação modular de um super app SwiftUI com clean architecture.
+Proposta de implementação modular de um super app SwiftUI.
 
 ![demo](https://github.com/lfsilva/simplesuperapp/blob/main/docs/imgs/demo.gif)
 
@@ -31,6 +31,15 @@ API_KEY = 1234
 ```
 
 Onde `API_KEY` é a chave de autorização da API que pode ser obtida em https://rapidapi.com/developer/authorization.
+
+## To do
+
+* Macro para injeção de dependência com `@Inject`
+* Ativar strict concurrency do Swift 6
+* Delegate de URLSession para autenticação
+* Módulo de navegação
+* Módulo de detalhe do filme
+* Criação de mini apps nos módulos 
 
 ## Author
 
