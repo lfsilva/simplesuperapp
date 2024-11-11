@@ -4,7 +4,7 @@ final class SearchFactory {
 
     @MainActor
     func make() -> some View {
-        guard let url = URL(string: "https://streaming-availability.p.rapidapi.com") else {
+        guard let url = URL(string: "https://\(Environment.apiHost)") else {
             fatalError("Critical error: URL is invalid.")
         }
         let session = URLSession(configuration: .default)
