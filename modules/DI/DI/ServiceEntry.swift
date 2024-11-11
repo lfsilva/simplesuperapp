@@ -1,7 +1,4 @@
-import DIInterface
-
-//typealias Factory = (DIContainerProtocol) -> Any
-typealias Factory = (DIContainer) -> Any
+typealias Factory = (DIContainerProtocol) -> Any
 
 protocol ServiceEntryProtocol: AnyObject {
     var factory: Factory { get }

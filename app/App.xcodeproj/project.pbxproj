@@ -11,6 +11,10 @@
 		9C1732B82CE2531000C6721E /* DI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1732B62CE2531000C6721E /* DI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C1732BC2CE255D000C6721E /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1732BB2CE255D000C6721E /* Networking.framework */; };
 		9C1732BD2CE255D000C6721E /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1732BB2CE255D000C6721E /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C1733022CE2582100C6721E /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1733002CE2582100C6721E /* Search.framework */; };
+		9C1733032CE2582100C6721E /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1733002CE2582100C6721E /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C1733042CE2582100C6721E /* SearchInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1733012CE2582100C6721E /* SearchInterface.framework */; };
+		9C1733052CE2582100C6721E /* SearchInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1733012CE2582100C6721E /* SearchInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CBB87B42CE2417C00CBC478 /* NetworkingInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBB87B32CE2417C00CBC478 /* NetworkingInterface.framework */; };
 		9CBB87B52CE2417C00CBC478 /* NetworkingInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBB87B32CE2417C00CBC478 /* NetworkingInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -34,7 +38,9 @@
 			files = (
 				9CBB87B52CE2417C00CBC478 /* NetworkingInterface.framework in Embed Frameworks */,
 				9C1732B82CE2531000C6721E /* DI.framework in Embed Frameworks */,
+				9C1733032CE2582100C6721E /* Search.framework in Embed Frameworks */,
 				9C1732BD2CE255D000C6721E /* Networking.framework in Embed Frameworks */,
+				9C1733052CE2582100C6721E /* SearchInterface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +50,8 @@
 /* Begin PBXFileReference section */
 		9C1732B62CE2531000C6721E /* DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1732BB2CE255D000C6721E /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1733002CE2582100C6721E /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1733012CE2582100C6721E /* SearchInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SearchInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E48B42CE19D05001FB6A8 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8E48C52CE19D07001FB6A8 /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBB87B32CE2417C00CBC478 /* NetworkingInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +90,9 @@
 			files = (
 				9CBB87B42CE2417C00CBC478 /* NetworkingInterface.framework in Frameworks */,
 				9C1732B72CE2531000C6721E /* DI.framework in Frameworks */,
+				9C1733022CE2582100C6721E /* Search.framework in Frameworks */,
 				9C1732BC2CE255D000C6721E /* Networking.framework in Frameworks */,
+				9C1733042CE2582100C6721E /* SearchInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +128,8 @@
 		9CBB87622CE2370500CBC478 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C1733002CE2582100C6721E /* Search.framework */,
+				9C1733012CE2582100C6721E /* SearchInterface.framework */,
 				9C1732BB2CE255D000C6721E /* Networking.framework */,
 				9C1732B62CE2531000C6721E /* DI.framework */,
 				9CBB87B32CE2417C00CBC478 /* NetworkingInterface.framework */,

@@ -6,7 +6,7 @@ struct AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SearchFactory().make()
+            AppFactory().make()
         }
     }
     

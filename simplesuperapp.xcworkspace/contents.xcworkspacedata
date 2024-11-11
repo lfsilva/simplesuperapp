@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:modules/Search/Search.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:modules/DI/DI.xcodeproj">
    </FileRef>
    <FileRef

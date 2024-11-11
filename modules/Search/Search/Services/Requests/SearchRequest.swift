@@ -7,6 +7,7 @@ struct SearchRequest: RequestProtocol {
     
     var path: String { "/shows/search/title" }
     var headers: [String: String]? {[
+        :
         "x-rapidapi-key": Environment.apiKey,
         "x-rapidapi-host": Environment.apiHost
     ]}

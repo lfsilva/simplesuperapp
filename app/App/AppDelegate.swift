@@ -2,6 +2,8 @@ import UIKit
 import DI
 import NetworkingInterface
 import Networking
+import SearchInterface
+import Search
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -19,6 +21,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             }
             let session = URLSession(configuration: .default)
             return APIClient(baseURL: baseURL, session: session)
+        }
+        
+        container.register(type: SearchFactoryProtocol.self) { _ in
+            SearchFactory()
         }
     }
 }

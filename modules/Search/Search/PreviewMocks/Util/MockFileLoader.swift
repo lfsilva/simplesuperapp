@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 
 enum MockData: String {
@@ -22,3 +23,4 @@ struct MockFileLoader {
         }
     }
 }
+#endif

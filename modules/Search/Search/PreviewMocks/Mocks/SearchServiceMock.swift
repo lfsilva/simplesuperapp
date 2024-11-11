@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 
 struct SearchServiceMock: SearchServiceProtocol {
@@ -14,3 +15,4 @@ struct SearchServiceMock: SearchServiceProtocol {
         return try await client.send(request)
     }
 }
+#endif

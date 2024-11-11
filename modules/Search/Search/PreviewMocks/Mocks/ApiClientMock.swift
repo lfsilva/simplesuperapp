@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 import NetworkingInterface
 
@@ -18,3 +19,4 @@ struct ApiClientMock: APIClientProtocol {
     func send<T: RequestProtocol>(_ request: T) async throws where T.Response == Void {
     }
 }
+#endif
