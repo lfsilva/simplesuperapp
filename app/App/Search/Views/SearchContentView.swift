@@ -14,7 +14,8 @@ struct SearchContentView: View {
                 title: $0.title,
                 overview: $0.overview,
                 releaseYear: $0.releaseYear,
-                imageUrl: $0.imageSet.verticalPoster.w240
+                cover: $0.imageSet.verticalPoster.w240,
+                streamings: $0.availableServices
             )
             .alignmentGuide(.listRowSeparatorLeading) { _ in
                 return 0
