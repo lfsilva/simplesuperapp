@@ -6,13 +6,15 @@
 
 Proposta de implementação modular de um super app SwiftUI com clean architecture.
 
-![screenshot](https://github.com/lfsilva/simplesuperapp/blob/main/docs/imgs/screenshot.png)
+![demo](https://github.com/lfsilva/simplesuperapp/blob/main/docs/imgs/demo.gif)
 
 ## Key Features
 
 * Aplicativo modular
-* Uso de mini apps
 * Mdódulo de injeção de dependências
+* Mdódulo de rede
+* Mdódulo de busca de filme
+* Swift Concurrency
 
 ## How To Use
 
