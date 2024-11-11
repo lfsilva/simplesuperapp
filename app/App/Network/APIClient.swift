@@ -45,20 +45,18 @@ extension APIClient {
         return try await decode(data)
     }
     
-    private func makeURLRequest<T: RequestProtocol>(for request: T) async throws -> URLRequest {
+    func makeURLRequest<T: RequestProtocol>(for request: T) async throws -> URLRequest {
         let url = try makeURL(for: request)
         var urlRequest = URLRequest(url: url)
         urlRequest.allHTTPHeaderFields = request.headers
         urlRequest.httpMethod = request.method.rawValue
         if let body = request.body {
             urlRequest.httpBody = try await encode(body)
-            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil &&
-                session.configuration.httpAdditionalHeaders?["Content-Type"] == nil {
+            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             }
         }
-        if urlRequest.value(forHTTPHeaderField: "Accept") == nil &&
-            session.configuration.httpAdditionalHeaders?["Accept"] == nil {
+        if urlRequest.value(forHTTPHeaderField: "Accept") == nil {
             urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         }
         return urlRequest
