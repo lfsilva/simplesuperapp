@@ -4,6 +4,8 @@ import NetworkingInterface
 import Networking
 import SearchInterface
 import Search
+import CoreInterface
+import Core
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -16,7 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let container = DIContainer.shared
         
         container.register(type: APIClientProtocol.self) { _ in
-            guard let baseURL = URL(string: "https://\(Environment.apiHost)") else {
+            guard let baseURL = URL(string: "https://\(Environment().apiHost)") else {
                 fatalError("Critical error: URL is invalid.")
             }
             let session = URLSession(configuration: .default)
@@ -25,6 +27,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         container.register(type: SearchFactoryProtocol.self) { _ in
             SearchFactory()
+        }
+        
+        container.register(type: EnvironmentProtocol.self) { _ in
+            Environment()
         }
     }
 }

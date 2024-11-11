@@ -1,4 +1,6 @@
 import NetworkingInterface
+import DI
+import CoreInterface
 
 struct SearchRequest: RequestProtocol {
     let title: String
@@ -7,9 +9,8 @@ struct SearchRequest: RequestProtocol {
     
     var path: String { "/shows/search/title" }
     var headers: [String: String]? {[
-        :
-        "x-rapidapi-key": Environment.apiKey,
-        "x-rapidapi-host": Environment.apiHost
+        "x-rapidapi-key": environment.apiKey,
+        "x-rapidapi-host": environment.apiHost
     ]}
     var query: [String: String]? {[
         "country": "br",
@@ -18,4 +19,11 @@ struct SearchRequest: RequestProtocol {
         "show_type": "movie",
         "output_language": "en"
     ]}
+    
+    private var environment: EnvironmentProtocol {
+        guard let environment = DIContainer.shared.resolve(type: EnvironmentProtocol.self) else {
+            fatalError("Critical error: URL is invalid.")
+        }
+        return environment
+    }
 }

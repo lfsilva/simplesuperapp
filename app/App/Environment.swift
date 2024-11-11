@@ -1,6 +1,7 @@
 import Foundation
+import CoreInterface
 
-enum Environment {
+struct Environment: EnvironmentProtocol {
     enum Keys {
         static let apiHost = "API_HOST"
         static let apiKey = "API_KEY"
@@ -12,17 +13,15 @@ enum Environment {
         }
         return dic
     }()
-}
-
-extension Environment {
-    static let apiHost: String = {
+    
+    let apiHost: String = {
         guard let value = Environment.infoDictionary[Keys.apiHost] as? String else {
             fatalError("\(Keys.apiHost) not set in plist")
         }
         return value
     }()
     
-    static let apiKey: String = {
+    let apiKey: String = {
         guard let value = Environment.infoDictionary[Keys.apiKey] as? String else {
             fatalError("\(Keys.apiKey) not set in plist")
         }
