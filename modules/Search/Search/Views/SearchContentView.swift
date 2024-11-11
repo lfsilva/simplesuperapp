@@ -9,8 +9,20 @@ struct SearchContentView: View {
     }
     
     var body: some View {
+        switch viewModel.state {
+        case .loading:
+            SearchSkeletonView()
+        case .loaded:
+            content
+        case .failed:
+            SearchInfoView(infoType: .error)
+        }
+    }
+    
+    @ViewBuilder
+    var content: some View {
         if viewModel.movies.isEmpty {
-            SearchEmptyView()
+            SearchInfoView(infoType: .empty)
         } else {
             List(viewModel.movies) {
                 SearchCellView(

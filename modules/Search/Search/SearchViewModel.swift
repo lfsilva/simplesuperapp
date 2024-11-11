@@ -9,10 +9,17 @@ enum OrderType: String, CaseIterable {
 @MainActor
 final class SearchViewModel: ObservableObject {
     
+    enum State {
+        case loading
+        case loaded
+        case failed
+    }
+    
     private let service: SearchServiceProtocol
     
     private var cancellables = Set<AnyCancellable>()
     
+    @Published var state: State = .loaded
     @Published var movies: [MovieResponse] = []
     @Published var selectOrder: OrderType?
     @Published var searchText = ""
@@ -34,10 +41,13 @@ final class SearchViewModel: ObservableObject {
         if searchText.isEmpty {
             movies = []
         } else {
+            state = .loading
             do {
                 movies = try await service.fatchMoview(title: searchText)
+                state = .loaded
             } catch {
                 print(error.localizedDescription)
+                state = .failed
             }
         }
     }

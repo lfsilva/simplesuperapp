@@ -1,6 +1,13 @@
 import SwiftUI
 
-struct SearchEmptyView: View {
+struct SearchInfoView: View {
+    
+    enum InfoType: String {
+        case empty = "Nenhum resultado"
+        case error = "Ocorreu um erro"
+    }
+    
+    let infoType: InfoType
     
     var body: some View {
         VStack(alignment: .center) {
@@ -9,7 +16,7 @@ struct SearchEmptyView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.gray.opacity(0.2))
                 .frame(width: 150)
-            Text("Nenhum resultado")
+            Text(infoType.rawValue)
                 .font(.title)
                 .foregroundColor(.gray)
                 .padding(.top, 32)
@@ -18,5 +25,5 @@ struct SearchEmptyView: View {
 }
 
 #Preview {
-    SearchEmptyView()
+    SearchInfoView(infoType: .empty)
 }

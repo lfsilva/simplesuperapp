@@ -1,12 +1,16 @@
 import SwiftUI
 
-struct BlinkViewModifier: ViewModifier {
+public struct BlinkViewModifier: ViewModifier {
     
     let duration: Double
     
+    public init(duration: Double) {
+        self.duration = duration
+    }
+    
     @State private var blinking: Bool = false
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .opacity(blinking ? 0.3 : 1)
             .animation(.easeInOut(duration: duration).repeatForever(), value: blinking)
@@ -17,7 +21,7 @@ struct BlinkViewModifier: ViewModifier {
 }
 
 extension View {
-    func blinking(duration: Double = 0.75) -> some View {
+    public func blinking(duration: Double = 0.75) -> some View {
         modifier(BlinkViewModifier(duration: duration))
     }
 }
