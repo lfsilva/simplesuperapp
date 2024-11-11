@@ -1,17 +1,15 @@
 import Foundation
 import SwiftUI
+import DI
 import NetworkingInterface
-import Networking
 
 final class SearchFactory {
 
     @MainActor
     func make() -> some View {
-        guard let url = URL(string: "https://\(Environment.apiHost)") else {
+        guard let client = DIContainer.shared.resolve(type: APIClientProtocol.self) else {
             fatalError("Critical error: URL is invalid.")
         }
-        let session = URLSession(configuration: .default)
-        let client = APIClient(baseURL: url, session: session)
         let service = SearchService(client: client)
         let viewModel = SearchViewModel(service: service)
         let view = SearchView(viewModel: viewModel)

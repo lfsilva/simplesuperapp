@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "829C4B48-436E-4619-A15B-2A811B8E88B7",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:DI.xcodeproj",
+        "identifier" : "9C4517EC2CE2478B001A7007",
+        "name" : "DITests"
+      }
+    }
+  ],
+  "version" : 1
+}
