@@ -1,4 +1,7 @@
+import Foundation
 import SwiftUI
+import NetworkingInterface
+import Networking
 
 final class SearchFactory {
 

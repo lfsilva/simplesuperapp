@@ -1,4 +1,5 @@
 import SwiftUI
+import NetworkingInterface
 
 protocol SearchServiceProtocol {
     func fatchMoview(title: String) async throws -> [MovieResponse]

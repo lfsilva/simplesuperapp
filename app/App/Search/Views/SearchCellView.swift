@@ -58,7 +58,6 @@ struct SearchCellView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
-                Color.gray
             }
             .frame(width: 35)
         }

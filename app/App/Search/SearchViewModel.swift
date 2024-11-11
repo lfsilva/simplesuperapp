@@ -1,5 +1,5 @@
 import Combine
-import Foundation
+import NetworkingInterface
 
 enum OrderType: String, CaseIterable {
     case title = "Título"
@@ -26,6 +26,8 @@ final class SearchViewModel: ObservableObject {
                 self?.orderMovies(by: newOrder)
             }
             .store(in: &cancellables)
+        
+        User().doSomething()
     }
     
     func searchMovies() async {

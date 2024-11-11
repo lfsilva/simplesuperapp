@@ -1,5 +1,5 @@
 import XCTest
-@testable import App
+@testable import Networking
 
 final class APIClientTests: XCTestCase {
     

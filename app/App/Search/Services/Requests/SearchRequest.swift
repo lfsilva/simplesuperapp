@@ -1,3 +1,5 @@
+import NetworkingInterface
+
 struct SearchRequest: RequestProtocol {
     let title: String
     

@@ -1,18 +1,13 @@
 import Foundation
+import NetworkingInterface
 
-protocol APIClientProtocol {
-    func send<T: RequestProtocol>(_ request: T) async throws -> T.Response where T.Response: Decodable
-    func send<T: RequestProtocol>(_ request: T) async throws where T.Response == Void
-}
-
-
-struct APIClient: APIClientProtocol {
+public struct APIClient: APIClientProtocol {
     private let baseURL: URL
     private let session: URLSession
     private let encoder: JSONEncoder
     private let decoder: JSONDecoder
     
-    init(
+    public init(
         baseURL: URL,
         session: URLSession,
         encoder: JSONEncoder = JSONEncoder(),
@@ -27,11 +22,11 @@ struct APIClient: APIClientProtocol {
 }
 
 extension APIClient {
-    func send<T: RequestProtocol>(_ request: T) async throws -> T.Response where T.Response: Decodable {
+    public func send<T: RequestProtocol>(_ request: T) async throws -> T.Response where T.Response: Decodable {
         try await send(request, decode)
     }
 
-    func send<T: RequestProtocol>(_ request: T) async throws where T.Response == Void {
+    public func send<T: RequestProtocol>(_ request: T) async throws where T.Response == Void {
         try await send(request) { _ in () }
     }
     
@@ -45,7 +40,7 @@ extension APIClient {
         return try await decode(data)
     }
     
-    func makeURLRequest<T: RequestProtocol>(for request: T) async throws -> URLRequest {
+    public func makeURLRequest<T: RequestProtocol>(for request: T) async throws -> URLRequest {
         let url = try makeURL(for: request)
         var urlRequest = URLRequest(url: url)
         urlRequest.allHTTPHeaderFields = request.headers

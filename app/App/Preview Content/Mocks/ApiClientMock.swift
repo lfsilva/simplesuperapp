@@ -1,4 +1,5 @@
 import Foundation
+import NetworkingInterface
 
 struct ApiClientMock: APIClientProtocol {
     private let mockData: MockData

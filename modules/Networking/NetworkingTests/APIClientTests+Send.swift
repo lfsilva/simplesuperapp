@@ -1,5 +1,6 @@
 import XCTest
-@testable import App
+@testable import Networking
+@testable import NetworkingInterface
 
 extension APIClientTests {
     

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol RequestProtocol {
+public protocol RequestProtocol {
     associatedtype Response
 
     var url: URL? { get }
@@ -12,22 +12,22 @@ protocol RequestProtocol {
 }
 
 extension RequestProtocol {
-    var url: URL? {
+    public var url: URL? {
         URL(string: path.isEmpty ? "/" : path)
     }
-    var path: String {
+    public var path: String {
         ""
     }
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         .get
     }
-    var query: [String: String]? {
+    public var query: [String: String]? {
         nil
     }
-    var headers: [String: String]? {
+    public var headers: [String: String]? {
         nil
     }
-    var body: Encodable? {
+    public var body: Encodable? {
         nil
     }
 }
