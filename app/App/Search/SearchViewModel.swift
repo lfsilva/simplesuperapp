@@ -1,4 +1,5 @@
 import Combine
+import Foundation
 
 enum OrderType: String, CaseIterable {
     case title = "Título"
@@ -14,6 +15,7 @@ final class SearchViewModel: ObservableObject {
     
     @Published var movies: [MovieResponse] = []
     @Published var selectOrder: OrderType?
+    @Published var searchText = ""
     
     init(service: SearchServiceProtocol) {
         self.service = service
@@ -27,10 +29,14 @@ final class SearchViewModel: ObservableObject {
     }
     
     func searchMovies() async {
-        do {
-            movies = try await service.fatchMoview(title: "Batman")
-        } catch {
-            print(error.localizedDescription)
+        if searchText.isEmpty {
+            movies = []
+        } else {
+            do {
+                movies = try await service.fatchMoview(title: searchText)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
     

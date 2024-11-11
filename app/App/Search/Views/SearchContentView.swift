@@ -9,20 +9,21 @@ struct SearchContentView: View {
     }
     
     var body: some View {
-        List(viewModel.movies) {
-            SearchCellView(
-                title: $0.title,
-                overview: $0.overview,
-                releaseYear: $0.releaseYear,
-                cover: $0.imageSet.verticalPoster.w240,
-                streamings: $0.availableServices
-            )
-            .alignmentGuide(.listRowSeparatorLeading) { _ in
-                return 0
+        if viewModel.movies.isEmpty {
+            SearchEmptyView()
+        } else {
+            List(viewModel.movies) {
+                SearchCellView(
+                    title: $0.title,
+                    overview: $0.overview,
+                    releaseYear: $0.releaseYear,
+                    cover: $0.imageSet.verticalPoster.w240,
+                    streamings: $0.availableServices
+                )
+                .alignmentGuide(.listRowSeparatorLeading) { _ in
+                    return 0
+                }
             }
-        }
-        .task {
-            await viewModel.searchMovies()
         }
     }
 }

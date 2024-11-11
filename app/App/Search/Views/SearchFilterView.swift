@@ -11,6 +11,7 @@ struct SearchFilterView: View {
             }
         }
         .pickerStyle(.segmented)
+        Spacer()
     }
 }
 
