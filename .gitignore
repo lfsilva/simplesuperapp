@@ -51,3 +51,8 @@ fastlane/test_output
 
 Packages
 .build/
+
+# config file
+
+Config.xcconfig
+.env

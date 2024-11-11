@@ -7,6 +7,8 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Text("apiHost: \(Environment.apiHost)")
+            Text("apiKey: \(Environment.apiKey)")
         }
         .padding()
     }
