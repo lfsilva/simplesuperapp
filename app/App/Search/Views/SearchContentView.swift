@@ -13,7 +13,8 @@ struct SearchContentView: View {
             SearchCellView(
                 title: $0.title,
                 overview: $0.overview,
-                releaseYear: $0.releaseYear
+                releaseYear: $0.releaseYear,
+                imageUrl: $0.imageSet.verticalPoster.w240
             )
             .alignmentGuide(.listRowSeparatorLeading) { _ in
                 return 0
@@ -27,6 +28,6 @@ struct SearchContentView: View {
 
 #if DEBUG
 #Preview {
-    SearchContentView(viewModel: .init(service: SearchServiceMock(mockResponse: MovieResponse.sample)))
+    SearchContentView(viewModel: .init(service: SearchServiceMock()))
 }
 #endif

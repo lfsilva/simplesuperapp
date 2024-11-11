@@ -16,13 +16,6 @@ struct SearchView: View {
 
 #if DEBUG
 #Preview {
-    SearchView(
-        viewModel: .init(
-            service: SearchServiceMock(
-                mockResponse: MovieResponse.sample,
-                mockDelay: 3_000_000_000
-            )
-        )
-    )
+    SearchView(viewModel: .init(service: SearchServiceMock(mockDelay: 3_000_000_000)))
 }
 #endif
