@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "4D497087-DADE-48C7-AE07-23BC5F113D12",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Search.xcodeproj",
+        "identifier" : "9C1732CF2CE257A900C6721E",
+        "name" : "SearchTests"
+      }
+    }
+  ],
+  "version" : 1
+}

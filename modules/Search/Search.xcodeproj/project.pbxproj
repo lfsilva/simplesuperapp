@@ -10,6 +10,7 @@
 		9C1732D12CE257A900C6721E /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1732C82CE257A900C6721E /* Search.framework */; };
 		9C17332D2CE258BA00C6721E /* SearchInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1732E62CE257C200C6721E /* SearchInterface.framework */; platformFilter = ios; };
 		9C1733332CE258FE00C6721E /* NetworkingInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1733322CE258FE00C6721E /* NetworkingInterface.framework */; };
+		9C17339E2CE2687C00C6721E /* DI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C17339D2CE2687C00C6721E /* DI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +34,12 @@
 		9C1732C82CE257A900C6721E /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1732D02CE257A900C6721E /* SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1732E62CE257C200C6721E /* SearchInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SearchInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C1732F22CE257D200C6721E /* SearchSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1733322CE258FE00C6721E /* NetworkingInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C17339A2CE2684700C6721E /* DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C17339D2CE2687C00C6721E /* DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1733AD2CE2700D00C6721E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1733B02CE2703700C6721E /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1733B12CE2703700C6721E /* NetworkingInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -53,11 +58,6 @@
 			path = SearchInterface;
 			sourceTree = "<group>";
 		};
-		9C1732F32CE257D200C6721E /* SearchSample */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SearchSample;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C17339E2CE2687C00C6721E /* DI.framework in Frameworks */,
 				9C1733332CE258FE00C6721E /* NetworkingInterface.framework in Frameworks */,
 				9C17332D2CE258BA00C6721E /* SearchInterface.framework in Frameworks */,
 			);
@@ -85,13 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C1732EF2CE257D200C6721E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,7 +95,6 @@
 				9C1732CA2CE257A900C6721E /* Search */,
 				9C1732D42CE257A900C6721E /* SearchTests */,
 				9C1732E72CE257C200C6721E /* SearchInterface */,
-				9C1732F32CE257D200C6721E /* SearchSample */,
 				9C17332C2CE258BA00C6721E /* Frameworks */,
 				9C1732C92CE257A900C6721E /* Products */,
 			);
@@ -113,7 +106,6 @@
 				9C1732C82CE257A900C6721E /* Search.framework */,
 				9C1732D02CE257A900C6721E /* SearchTests.xctest */,
 				9C1732E62CE257C200C6721E /* SearchInterface.framework */,
-				9C1732F22CE257D200C6721E /* SearchSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +113,11 @@
 		9C17332C2CE258BA00C6721E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C1733B02CE2703700C6721E /* Networking.framework */,
+				9C1733B12CE2703700C6721E /* NetworkingInterface.framework */,
+				9C1733AD2CE2700D00C6721E /* Core.framework */,
+				9C17339D2CE2687C00C6721E /* DI.framework */,
+				9C17339A2CE2684700C6721E /* DI.framework */,
 				9C1733322CE258FE00C6721E /* NetworkingInterface.framework */,
 			);
 			name = Frameworks;
@@ -216,28 +213,6 @@
 			productReference = 9C1732E62CE257C200C6721E /* SearchInterface.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9C1732F12CE257D200C6721E /* SearchSample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C1732FD2CE257D400C6721E /* Build configuration list for PBXNativeTarget "SearchSample" */;
-			buildPhases = (
-				9C1732EE2CE257D200C6721E /* Sources */,
-				9C1732EF2CE257D200C6721E /* Frameworks */,
-				9C1732F02CE257D200C6721E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9C1732F32CE257D200C6721E /* SearchSample */,
-			);
-			name = SearchSample;
-			packageProductDependencies = (
-			);
-			productName = SearchSample;
-			productReference = 9C1732F22CE257D200C6721E /* SearchSample.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,9 +233,6 @@
 						CreatedOnToolsVersion = 16.1;
 						LastSwiftMigration = 1610;
 					};
-					9C1732F12CE257D200C6721E = {
-						CreatedOnToolsVersion = 16.1;
-					};
 				};
 			};
 			buildConfigurationList = 9C1732C22CE257A900C6721E /* Build configuration list for PBXProject "Search" */;
@@ -280,7 +252,6 @@
 				9C1732C72CE257A900C6721E /* Search */,
 				9C1732CF2CE257A900C6721E /* SearchTests */,
 				9C1732E52CE257C200C6721E /* SearchInterface */,
-				9C1732F12CE257D200C6721E /* SearchSample */,
 			);
 		};
 /* End PBXProject section */
@@ -307,13 +278,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C1732F02CE257D200C6721E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -332,13 +296,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9C1732E22CE257C200C6721E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C1732EE2CE257D200C6721E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -674,65 +631,6 @@
 			};
 			name = Release;
 		};
-		9C1732FE2CE257D400C6721E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SearchSample/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lfsilva.SearchSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9C1732FF2CE257D400C6721E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SearchSample/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lfsilva.SearchSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,15 +666,6 @@
 			buildConfigurations = (
 				9C1732EC2CE257C200C6721E /* Debug */,
 				9C1732ED2CE257C200C6721E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C1732FD2CE257D400C6721E /* Build configuration list for PBXNativeTarget "SearchSample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C1732FE2CE257D400C6721E /* Debug */,
-				9C1732FF2CE257D400C6721E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

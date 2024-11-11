@@ -4,7 +4,6 @@ import NetworkingInterface
 import Networking
 import SearchInterface
 import Search
-import CoreInterface
 import Core
 
 class AppDelegate: NSObject, UIApplicationDelegate {

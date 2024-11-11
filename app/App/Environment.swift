@@ -1,5 +1,5 @@
 import Foundation
-import CoreInterface
+import Core
 
 struct Environment: EnvironmentProtocol {
     enum Keys {

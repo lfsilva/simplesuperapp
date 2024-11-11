@@ -1,6 +1,6 @@
 import NetworkingInterface
 import DI
-import CoreInterface
+import Core
 
 struct SearchRequest: RequestProtocol {
     let title: String
